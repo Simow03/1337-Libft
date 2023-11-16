@@ -6,7 +6,7 @@
 #    By: mstaali <mstaali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 13:50:04 by mstaali           #+#    #+#              #
-#    Updated: 2023/11/14 23:06:38 by mstaali          ###   ########.fr        #
+#    Updated: 2023/11/16 03:45:26 by mstaali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,16 +28,16 @@ BONUS_SOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstad
 MAIN_OBJECTS = $(MAIN_SOURCES:.c=.o)
 BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
+all : $(NAME)
+
 $(NAME) : $(MAIN_OBJECTS)
 	ar rcs $(NAME) $(MAIN_OBJECTS)
 
-$(MAIN_OBJECTS) : $(MAIN_SOURCES)
-	$(CC) -c $(CFLAGS) $(MAIN_SOURCES)
+%.o : %.c libft.h
+	$(CC) -c $< -o $@
 
 bonus : $(BONUS_OBJECTS)
 	ar rcs $(NAME) $(BONUS_OBJECTS)
-
-all : $(NAME)
 
 clean :
 	rm -f $(MAIN_OBJECTS) $(BONUS_OBJECTS)
