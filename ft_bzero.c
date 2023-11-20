@@ -6,23 +6,16 @@
 /*   By: mstaali <mstaali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 01:22:55 by mstaali           #+#    #+#             */
-/*   Updated: 2023/11/02 01:32:47 by mstaali          ###   ########.fr       */
+/*   Updated: 2023/11/20 23:26:52 by mstaali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *ptr, size_t size)
+void	ft_bzero(void *ptr, size_t size)
 {
-	char	*p;
-	size_t	i;
-
-	p = (char *)ptr;
-	i = 0;
-	while (i < size)
-	{
-		p[i] = 0;
-		i++;
-	}
-	return (ptr);
+	if (!ptr)
+		return ;
+	else
+		ft_memset(ptr, 0, size);
 }
