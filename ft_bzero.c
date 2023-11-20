@@ -6,7 +6,7 @@
 /*   By: mstaali <mstaali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 01:22:55 by mstaali           #+#    #+#             */
-/*   Updated: 2023/11/20 23:26:52 by mstaali          ###   ########.fr       */
+/*   Updated: 2023/11/20 23:51:30 by mstaali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	ft_bzero(void *ptr, size_t size)
 {
-	if (!ptr)
-		return ;
-	else
-		ft_memset(ptr, 0, size);
+	ft_memset(ptr, 0, size);
 }
