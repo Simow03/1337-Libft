@@ -6,7 +6,7 @@
 #    By: mstaali <mstaali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 13:50:04 by mstaali           #+#    #+#              #
-#    Updated: 2023/11/16 03:45:26 by mstaali          ###   ########.fr        #
+#    Updated: 2023/11/24 00:05:34 by mstaali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ $(NAME) : $(MAIN_OBJECTS)
 	ar rcs $(NAME) $(MAIN_OBJECTS)
 
 %.o : %.c libft.h
-	$(CC) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus : $(BONUS_OBJECTS)
 	ar rcs $(NAME) $(BONUS_OBJECTS)
