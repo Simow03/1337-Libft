@@ -6,7 +6,7 @@
 /*   By: mstaali <mstaali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 16:32:04 by mstaali           #+#    #+#             */
-/*   Updated: 2023/11/11 20:27:49 by mstaali          ###   ########.fr       */
+/*   Updated: 2023/11/23 10:23:45 by mstaali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*buffer;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	buffer = (char *)malloc(ft_strlen(s) + 1);
 	if (!buffer)
 		return (NULL);
