@@ -6,7 +6,7 @@
 /*   By: mstaali <mstaali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 21:04:50 by mstaali           #+#    #+#             */
-/*   Updated: 2023/11/20 23:25:45 by mstaali          ###   ########.fr       */
+/*   Updated: 2023/11/25 17:22:37 by mstaali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define LIBFT_H
 
 # include <stddef.h>
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 
